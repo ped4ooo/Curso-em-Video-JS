@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <H1>Descubra se você é estrangeiro</H1>
+
+    <input type="text" id="nacionalidade">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <H1 id="display">Você é? </H1>
+
+    <script>
+
+        function verificar() {
+        
+            var nation = window.document.getElementById('nacionalidade')
+            var nat = nation.value
+
+            if (nat == 'Brasileiro') {
+                var disp = window.document.getElementById('display')
+                disp.innerHTML = 'Você é conterrâneo, portanto Brasileiro!' } 
+            
+            else {
+                var disp = window.document.getElementById('display')
+                disp.innerHTML = 'Você é estrangeiro!'
+            }
+        }
+
+
+    </script>
+</body>
+</html>

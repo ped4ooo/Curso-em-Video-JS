@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMATORIA</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>SOMANDO VALORES</h1>
+    <input type="number" id="txtn1"> +
+    <input type="number" id="txtn2">
+    <input type="button" value="+" onclick="somar()">
+    <input type="button" value="X" onclick="multiplicar()">
+    
+    
+    <div id="rex">RESULTADO:</div>
+
+
+
+
+    <script>
+        function somar(){
+            var val1 = window.document.getElementById('txtn1')
+            var val2 = window.document.getElementById('txtn2')
+            var n1 = Number(val1.value)
+            var n2 = Number(val2.value)
+            var resultado = n1 + n2
+            window.alert(resultado)
+        }
+
+        function multiplicar(){
+            var val1 = window.document.getElementById('txtn1')
+            var val2 = window.document.getElementById('txtn2')
+            var n1 = Number(val1.value)
+            var n2 = Number(val2.value)
+            var resultado = n1 * n2
+            //window.alert(resultado)
+            var dis = window.document.getElementById('rex')
+            dis.innerHTML = `O resultado da multiplicação entre ${n1} e ${n2} é ${resultado}`
+        }
+
+
+    </script>
+
+</body>
+</html>

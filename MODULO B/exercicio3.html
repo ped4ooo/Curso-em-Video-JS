@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Times;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Digite seu nome: ")
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras!<br/>`) //strong é para negritar e br para pular a linha
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}!<br/>`) //toUpperCase deixa todo o conteúdo maiúsculo
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()}!`) //toLowerCase deixa todo o conteúdo minúsculo
+    </script>
+</body>
+</html>

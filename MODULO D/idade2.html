@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Você é adulto ou criança?</h1>
+    
+    <H1>Digite sua idade: </H1>
+
+        <input type="number" id="campo-idade">
+        <input type="button" value="Validar" id="btn-validar" onclick="validar()">
+
+    <H1 id="display">Você é:</H1>
+
+    <script>
+        
+
+
+
+
+        function validar() {
+            
+            var idade = window.document.getElementById('campo-idade')
+            var age = parseInt(idade.value)
+            var val = window.document.getElementById('display')
+            
+
+            if (age <= 11){
+                val.innerHTML = 'Você é uma criança' 
+            } 
+            
+            else if (age >11  && age <=17 ){
+                val.innerHTML = 'Você é um adolescente' 
+            }
+            
+            else {
+                val.innerHTML = 'Você é um adulto' 
+            }
+                
+        }
+
+    </script>
+</body>
+</html>

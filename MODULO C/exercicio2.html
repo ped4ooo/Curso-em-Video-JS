@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OURO BRANCO</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(221, 10, 10);
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        EUUUUUUU
+    </div>
+
+
+    <script>
+        
+        var div = window.document.getElementById('area')
+
+         function clicar(){
+            div.innerText = 'EU'
+            div.style.background = 'red'
+            div.style.color = 'white'
+         }
+
+         function entrou(){
+            div.innerText = 'TEEEEE'
+            div.style.background = 'black'
+            div.style.color = 'red'
+         }
+
+         function saiu(){
+            div.innerText = 'AMOO!'
+            div.style.background = 'red'
+            div.style.color = 'white'
+         }
+
+    </script>
+</body>
+</html>

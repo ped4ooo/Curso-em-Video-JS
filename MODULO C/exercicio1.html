@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background: rgb(0, 0, 0);
+            color: yellowgreen;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+        <h1>Iniciando estudos com DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p>aprendendo a usar DOM em <strong>JAVA SCRIPT</strong></p>
+        <div id="msg">Clique em mim</div>
+
+        <script>
+            //window.document.write(`Olá mundo`)// forma não recomendada de add componentes
+            //window.document.write(window.document.URL) // aqui eu mostro a url
+
+            //window.document.write(`Aqui vai o resultado do meu primeiro parágrafo: ${p1.innerText}`)
+            
+            /*var numero = Number.parseInt(prompt("Digite um número"))
+            var numero2 = Number.parseFloat(prompt("Digite outro número"))
+            var p1 = window.document.getElementsByTagName('p')[1]  // aqui eu estou passando qual será o elemento utilizado (segundo parágrafo)
+            var d = window.document.getElementsById('msg')
+            //var res = numero + numero2
+
+            window.document.write(`A soma entre ${numero} e ${numero2} é igual a  ${numero + numero2}.`)
+            p1.style.color = 'white' //alterando o valor do parágrafo
+            d.style.color = 'white'*/
+
+            var numero1 = Number(window.prompt("Digite um número"))
+            var numero2 = Number(window.prompt("Digite outro número"))
+            // var div = window.document.getElementById('msg')
+            var div = window.document.querySelector('div#msg')                       // utilizando query selector (quando for class utilizar . quando for id usar #)
+            var paragrafo1 = window.document.getElementsByTagName('p')[0]
+            
+            paragrafo1.style.color = 'white'
+            div.style.color = 'white'
+            div.innerText = numero1 + numero2
+
+
+        </script>
+</body>
+</html>

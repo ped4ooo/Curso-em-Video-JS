@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#msg{
+            background: rgb(156, 6, 6);
+            color: blue;
+            height: 200px;
+            width: 200px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+        <div id="msg" onmouseenter="entrou()" onmouseout="saiu()">
+            Interaja...
+        </div>
+
+        <div id="nmr1">Digite aqui um número: <input type="number"></div>
+        <div id="nmr2">Digite outro número: <input type="number"></div>
+        <div id="resultado">RESULTADO:</div>
+        
+        
+            <button id="somar" onclick="soma()">SOMAR</button>
+
+
+    <script>
+
+
+            var inp1 = Number(window.document.getElementsByTagName('input')[0])
+            var inp2 = Number(window.document.getElementsByTagName('input')[1])
+            var display = window.document.querySelector('div#resultado')
+            var button = window.document.querySelector('button#somar')
+            //window.alert(resultado.innerText)
+
+            function soma(){
+                //var resultado = inp1 + inp2
+                window.alert(inp1 + inp2)
+
+            }
+
+
+
+
+ /*           var divmsg = window.document.getElementById('msg')
+
+            function entrou(){
+                divmsg.innerText = 'ENTROU'
+                divmsg.style.color = 'orange'
+                divmsg.style.background = 'green'
+            }
+
+            function saiu(){
+                divmsg.innerText = 'SAIU'
+                divmsg.style.color = 'black'
+                divmsg.style.background = 'orange'
+               // window.alert('ESTOU TE VENDO...')
+            }
+
+            var body = window.document.body() */
+
+    </script>
+</body>
+</html>
