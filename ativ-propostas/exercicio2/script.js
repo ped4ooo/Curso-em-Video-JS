@@ -1,30 +1,61 @@
- function carregar(){
-    var saudacao = window.document.getElementById('saudacao')
-    var mensagem = window.document.getElementById('mensagem')
-    var foto = window.document.getElementById('imagem')
-    var data = new Date()
-    var hora = data.getHours()
+function verificar(){
+    var date = new Date()
+    var ano = date.getFullYear()
+    var anoDig = document.getElementById('txtano')    
+    var res = document.querySelector('div#res')
+    
 
-    //var hora = 12// testando diferentes horários
+    if (anoDig.value == 0 || anoDig.value > ano  ) {
+        window.alert('Verifique os dados e tente novamente!')
 
-    mensagem.innerHTML = `Agora são ${hora}h`
+    } else {
+        var fsex = document.getElementsByName('radsex')
+        var idade = ano - Number(anoDig.value)
+        var gen = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+        
+        if(fsex[0].checked){
+                gen = 'Homem'
 
-    if (hora >= 0 && hora < 12){
-        foto.src = 'manha.png'
-        document.body.style.background = '#92885a'
-        saudacao.innerHTML = `Bom dia!`
-        //console.log('VAXCO') Quando o código não estava alterando as imagens (estava faltando o ID da imagem no HTML) eu coloquei esse console.log para descobrir onde meu programa estava chegando e se o erro estava aqui.
+                if (idade >= 0 && idade <= 10 ) {
+                    img.setAttribute('src' , 'menino.png')
+                }
+                else if (idade <= 20) {
+                    img.setAttribute('src' , 'moço.png')
+
+                }
+                else if (idade <= 59) {
+                    img.setAttribute('src' , 'homem.png')
+                }
+                else if (idade >= 60) {
+                    img.setAttribute('src' , 'senhor.png')
+                }
+            
+            } 
+    
+        else if (fsex[1].checked) {
+                gen = 'Mulher'
+
+                if (idade >= 0 && idade <= 10 ) {
+                    img.setAttribute('src' , 'menina.png')
+                }
+                else if (idade <= 20) {
+                    img.setAttribute('src' , 'moça.png')
+
+                }
+                else if (idade <= 59) {
+                    img.setAttribute('src' , 'mulher.png')
+                }
+                else if (idade >= 60) {
+                    img.setAttribute('src' , 'senhora.png')
+                }
+            }
+
+        res.computedStyleMap.textAlign = 'center'
+        res.innerHTML = `Foi identificado ${gen} com ${idade}`
+        res.appendChild(img)
+
+        
     }
-    else if (hora < 18 ) {
-        foto.src = 'tarde.png'
-        document.body.style.background = '#834204ff'
-        saudacao.innerHTML = `Boa tarde!`
-        //console.log('FLORIPA')
-    }
-    else { 
-        foto.src = 'noite.png'
-        document.body.style.background = '#0a2320'
-        saudacao.innerHTML = `Boa noite!`
-        //console.log('ERREJOTA')
-    }
- }
+} 
