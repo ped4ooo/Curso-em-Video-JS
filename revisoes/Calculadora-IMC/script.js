@@ -4,7 +4,7 @@ function verificar() {
     var valorPeso = Number(document.getElementById('peso').value)
     var valorAltura = Number(document.getElementById('altura').value)
     var valorCalculo = (valorPeso / valorAltura ** 2)
-    var valorImc = valorCalculo.toFixed(2)
+    var valorImc = Number(valorCalculo.toFixed(2))
 
     if(valorImc < 18.5){
         resultado.innerHTML = `O seu IMC é ${valorImc} - IMC menor que 18,5 = <strong>"Baixo peso"</strong>`
