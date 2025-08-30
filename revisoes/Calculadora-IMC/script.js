@@ -18,10 +18,10 @@ function verificar() {
     else if (valorImc >= 30 && valorImc < 35){
         resultado.innerHTML = `O seu IMC é ${valorImc} - IMC entre 30 e 34,9 = <strong>"Obesidade"</strong>`
     }
-    else if(valorImc >= 35 && valorImc < 40){
+    else if (valorImc >= 35 && valorImc < 40){
         resultado.innerHTML = `O seu IMC é ${valorImc} - IMC entre 35 e 39,9 = <strong>"Obesidade Mórbida"</strong>`
     }
-    else if(valorImc >= 40){
+    else if (valorImc >= 40){
         resultado.innerHTML = `O seu IMC é ${valorImc} - IMC superior a 40 = <strong>"Obesidade Mórbida"</strong>`
     }
 }

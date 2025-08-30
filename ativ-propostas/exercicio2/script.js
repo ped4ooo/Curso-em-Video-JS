@@ -12,8 +12,8 @@ function verificar(){
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(anoDig.value)
         var gen = ''
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        var img = document.createElement('img') //Cria dinamicamente uma nova tag
+        img.setAttribute('id', 'foto') //Define o atributo id da imagem para "foto"
         
         if(fsex[0].checked){
                 gen = 'Homem'
@@ -54,7 +54,7 @@ function verificar(){
 
         res.computedStyleMap.textAlign = 'center'
         res.innerHTML = `Foi identificado ${gen} com ${idade}`
-        res.appendChild(img)
+        res.appendChild(img) //Pega a imagem que criada e adiciona ela dentro do div#res
 
         
     }
