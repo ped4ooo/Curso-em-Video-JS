@@ -7,17 +7,37 @@ function contar(){
     var valRes = window.document.getElementById('resultado')
     var contador = valIni
 
-    if (valIni == 0 || valFim == 0 || valPasso== 0){
+    if (valIni == 0 || valFim == 0 ){
         window.alert('[ERRO] Faltam dados!')
     }
     else {
-        valRes.innerHTML = 'Contando:'
+        valRes.innerHTML = 'Contando: <br>'
 
-        while(contador <= valFim){
-            valRes.innerHTML += `${contador} `
-            contador += valPasso
+        if(valPasso <= 0){
+            window.alert(`Passo inválido! Considerando PASSO = 1`)
+            valPasso = 1
         }
 
+
+        // COMO FAZER UMA CONTAGEM CRESCENTE:
+
+        if (valIni < valFim){
+
+            for (contador = valIni; contador <= valFim; contador += valPasso){ 
+                res.innerHTML += `${contador} \u{1F449}`
+            }
+        }
+
+        // COMO FAZER UMA CONTAGEM DECRESCENTE:
+        else {
+            for (contador = valIni; contador >= valFim; contador -= valPasso){
+                res.innerHTML += `${contador} \u{1F449}`
+            }
+        }
+
+        // COMO MOSTRAR UM EMOJI NO HTML
+        res.innerHTML += `\u{1F3C1}`
+        
     }
 }
 
