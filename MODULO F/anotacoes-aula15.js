@@ -1,4 +1,3 @@
-/// Aprendendo a usar Vetore/Array
 
 // Aprendendo a colocar valores em um array
 let num = [4, 9, 5]
@@ -18,10 +17,18 @@ console.log(testeOrdem.sort())
 
 
 
-// Como adicionar um valor na última posição de um arrau
-let adicionandoVal = [6, 2, 4, 9, 1,8]
+// Como adicionar um valor na última posição de um array
+let adicionandoVal = [6, 2, 4, 9, 1, 8]
 adicionandoVal.push(3)
 console.log(adicionandoVal)
+
+
+
+// Como pesquisar se existe um valor dentro de um array
+let pesquisa = [0, 8, 4, 2, 6, 3]
+console.log(pesquisa.indexOf(3))
+
+
 
 // Colocando tipos de dados diferentes em um array
 let primeiroVetor = ["Pedro", 21, "Admin"]
